@@ -29,7 +29,7 @@ export function Hero() {
           loop
           playsInline
           poster="/img/hero-poster.jpg"
-          className="w-full h-full object-cover object-center opacity-0 transition-opacity duration-1200 [&.loaded]:opacity-100"
+          className="w-full h-full object-cover object-center opacity-0 transition-opacity duration-[1200ms] [&.loaded]:opacity-100"
         >
           <source src="/video/hero-reel.mp4" type="video/mp4" />
         </video>
@@ -56,7 +56,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-2">
+      <div className="relative z-[2]">
         <div className="font-mono text-[0.65rem] tracking-[0.4em] text-primary uppercase mb-6 opacity-0 translate-y-5 animate-[fadeUp_0.8s_0.2s_forwards]">
           Club de Cheerleading · Formativo &amp; Competitivo · Florencia, Caqueta
         </div>

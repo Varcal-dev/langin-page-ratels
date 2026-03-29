@@ -9,7 +9,7 @@ export function UrgencyBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="bg-primary text-center py-2 px-8 font-mono text-[0.6rem] tracking-[0.25em] text-foreground uppercase relative z-99">
+    <div className="bg-primary text-center py-2 px-8 font-mono text-[0.6rem] tracking-[0.25em] text-foreground uppercase relative z-[99]">
       Cupos limitados
       <span className="opacity-60 mx-3">·</span>
       Inscripciones hasta el 15 de agosto

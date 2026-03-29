@@ -34,7 +34,7 @@ export function Navbar() {
     <>
       <nav
         className={cn(
-          "fixed top-0 left-0 right-0 z-100 flex items-center justify-between px-4 md:px-16 py-4 transition-all duration-300",
+          "fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-4 md:px-16 py-4 transition-all duration-300",
           isScrolled
             ? "bg-background/98 border-b border-primary/30 backdrop-blur-sm"
             : "bg-gradient-to-b from-background/95 to-transparent backdrop-blur-[2px]"
@@ -80,7 +80,7 @@ export function Navbar() {
       {/* Mobile Menu */}
       <div
         className={cn(
-          "fixed inset-0 z-150 bg-background/98 backdrop-blur-md transition-transform duration-300 md:hidden",
+          "fixed inset-0 z-[150] bg-background/98 backdrop-blur-md transition-transform duration-300 md:hidden",
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >

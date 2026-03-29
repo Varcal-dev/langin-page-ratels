@@ -1,0 +1,1838 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ratels All Stars — Cheerleading en Florencia, Caquetá</title>
+    <meta
+      name="description"
+      content="Ratels All Stars es el club de cheerleading más audaz de Florencia, Caquetá. Con grupos formativos y competitivos para todas las edades, forjamos guerreros del escenario con piel de hierro y corazón de fuego. ¡Únete a la tribu Ratels hoy!"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles_2.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <div id="progress-bar"></div>
+
+    <!-- WA FLOAT -->
+    <a
+      class="wa-float"
+      onclick="openWhatsApp()"
+      href="javascript:void(0)"
+      title="Escribir por WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+        />
+      </svg>
+    </a>
+
+    <!-- URGENCY BANNER -->
+    <div class="urgency-banner" id="urgencyBanner">
+      🔴 Cupos limitados<span>·</span>Inscripciones hasta el 15 de
+      agosto<span>·</span>Últimos lugares en Junior & Youth
+      <button class="close-banner" onclick="closeBanner()">✕</button>
+    </div>
+
+    <!-- NAV -->
+    <nav id="navbar">
+      <a href="#hero" class="nav-logo">RATELS <span>★</span> ALL STARS</a>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#porquenosotros">¿Por qué?</a></li>
+        <li><a href="#grupos">Grupos</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#entrenadores">Equipo</a></li>
+        <li><a href="#testimonios">Resultados</a></li>
+        <li><a href="#test-nivel">Test</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#inscripciones" class="nav-cta">Inscríbete</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <!-- MENÚ MÓVIL -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-inner">
+        <ul>
+          <li>
+            <a href="#porquenosotros" onclick="closeMobileMenu()"
+              >¿Por qué Ratels?</a
+            >
+          </li>
+          <li><a href="#grupos" onclick="closeMobileMenu()">Grupos</a></li>
+          <li><a href="#precios" onclick="closeMobileMenu()">Precios</a></li>
+          <li>
+            <a href="#entrenadores" onclick="closeMobileMenu()">Equipo</a>
+          </li>
+          <li>
+            <a href="#testimonios" onclick="closeMobileMenu()">Resultados</a>
+          </li>
+          <li>
+            <a href="#ubicacion" onclick="closeMobileMenu()">Ubicación</a>
+          </li>
+          <li>
+            <a href="#test-nivel" onclick="closeMobileMenu()">Test de nivel</a>
+          </li>
+          <li><a href="#faq" onclick="closeMobileMenu()">Preguntas</a></li>
+        </ul>
+        <div class="mobile-menu-cta">
+          <a
+            href="#inscripciones"
+            class="btn-primary"
+            onclick="closeMobileMenu()"
+          >
+            Inscríbete Ahora
+          </a>
+          <button
+            class="btn-wa"
+            onclick="
+              openWhatsApp();
+              closeMobileMenu();
+            "
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+              />
+            </svg>
+            WhatsApp
+          </button>
+        </div>
+        <div class="mobile-menu-slogan">Piel de hierro · Corazón de fuego</div>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero">
+      <!-- BACKGROUND & OVERLAYS 
+      <div class="hero-bg"></div>-->
+      <!-- VIDEO DE FONDO -->
+      <div class="hero-video-wrapper">
+        <video
+          id="heroVideo"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="/img/hero-poster.jpg"
+        >
+          <source src="/video/hero-reel.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-video-overlay"></div>
+      </div>
+
+      <div class="hero-bg hero-bg--video"></div>
+      <div class="hero-scratch">
+        <div class="scratch-line"></div>
+        <div class="scratch-line"></div>
+        <div class="scratch-line"></div>
+        <div class="scratch-line"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-tag">
+          Club de Cheerleading · Formativo &amp; Competitivo · Florencia,
+          Caquetá
+        </div>
+        <h1 class="hero-title">
+          <span class="ls">RATELS</span><br />
+          <span class="lw">ALL</span><br />
+          <span class="ls">STARS</span>
+        </h1>
+        <p class="hero-subtitle">Piel de hierro · Corazón de fuego</p>
+        <div class="hero-cta">
+          <a href="#inscripciones" class="btn-primary">Inscríbete Ahora</a>
+          <a href="#test-nivel" class="btn-outline">¿En qué grupo estás?</a>
+        </div>
+        <div class="hero-badges">
+          <span class="hero-badge">Edades 4 a 30+ años</span>
+          <span class="hero-badge">Sin experiencia previa</span>
+          <span class="hero-badge">Desde $80.000/mes</span>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>-</span>
+        <div class="scroll-bar"></div>
+      </div>
+    </section>
+    <div class="divider"></div>
+
+    <!-- ¿POR QUÉ RATELS? -->
+    <section id="porquenosotros">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-tag">Diferenciador claro</div>
+          <h2 class="section-title">¿Por qué<br /><em>Ratels?</em></h2>
+        </div>
+        <div class="why-grid">
+          <div class="why-card reveal">
+            <div class="why-icon">🏆</div>
+            <h3>Enfoque competitivo real</h3>
+            <p>
+              No solo entrenamos, competimos. Preparamos atletas para torneos
+              regionales y nacionales con metodología progresiva y estructurada.
+            </p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon">🦡</div>
+            <h3>Cultura tribal única</h3>
+            <p>
+              Somos más que un club: somos una tribu con rituales, identidad y
+              mentalidad propias. Los Ratels no son atletas — son guerreros del
+              escenario.
+            </p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon">📐</div>
+            <h3>Método estructurado</h3>
+            <p>
+              5 pilares de enseñanza con progresión técnica clara. Desde cero
+              hasta alto rendimiento — cada atleta avanza con propósito.
+            </p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon">👨‍👩‍👧</div>
+            <h3>Para todas las edades</h3>
+            <p>
+              Grupos desde los 4 años hasta adultos. Un lugar donde toda la
+              familia puede crecer en el mismo deporte.
+            </p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon">🛡️</div>
+            <h3>Seguridad primero</h3>
+            <p>
+              Entrenadores certificados y protocolo riguroso en stunts. El
+              bienestar físico y emocional del atleta es prioridad absoluta.
+            </p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon">🔥</div>
+            <h3>Formación integral</h3>
+            <p>
+              Técnica + mentalidad + carácter. Aprendes a no rendirte, a
+              trabajar en equipo y a dominar el escenario.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+
+    <!-- IDENTIDAD -->
+    <section id="identidad">
+      <div class="section-inner">
+        <div class="id-grid">
+          <div class="reveal-left">
+            <div class="section-tag">Nuestra esencia</div>
+            <h2 class="section-title">
+              Fuerza<br /><em>imparable.</em><br />Coraje<br />sin límites.
+            </h2>
+            <div class="metal-line"></div>
+            <div class="id-quote">
+              "No tememos,<br />no fingimos,<br /><em>no caemos.</em><br />Somos
+              Ratels."
+            </div>
+            <p
+              style="font-size: 0.95rem; color: var(--silver); line-height: 1.8"
+            >
+              El Ratel —tejón melero— es uno de los animales más valientes del
+              planeta. No retrocede ante nada. Ese es nuestro espíritu traducido
+              al cheerleading.
+            </p>
+          </div>
+          <div class="id-values reveal-right">
+            <div class="value-card">
+              <h3>Valentía</h3>
+              <p>
+                El miedo se rinde ante un corazón Ratels. Enfrentamos cada
+                rutina y competencia con determinación total.
+              </p>
+            </div>
+            <div class="value-card">
+              <h3>Resiliencia</h3>
+              <p>
+                Caemos, nos levantamos, lo hacemos mejor. La piel de hierro se
+                forja en los momentos difíciles.
+              </p>
+            </div>
+            <div class="value-card">
+              <h3>Lealtad de equipo</h3>
+              <p>
+                Nadie cae solo. Somos un solo cuerpo, una sola voz, un solo
+                rugido.
+              </p>
+            </div>
+            <div class="value-card">
+              <h3>Excelencia técnica</h3>
+              <p>
+                Pasión sin técnica es ruido. Combinamos el corazón de fuego con
+                la precisión metálica.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+
+    <!-- GRUPOS -->
+    <section id="grupos">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-tag">Divisiones</div>
+          <h2 class="section-title">Nuestros<br /><em>Grupos</em></h2>
+          <p
+            style="
+              color: var(--silver);
+              font-size: 1.05rem;
+              max-width: 580px;
+              margin-top: 1rem;
+              margin-bottom: 3rem;
+            "
+          >
+            Hay un lugar para ti aquí — desde los 4 años sin experiencia hasta
+            adultos en competencia de élite.
+          </p>
+        </div>
+        <div class="grupos-grid">
+          <div class="grupo-card reveal">
+            <div class="grupo-icon">⭐</div>
+            <div class="grupo-age">4–7</div>
+            <div class="grupo-name">Mini Ratels</div>
+            <p class="grupo-desc">
+              El primer rugido. Introducción al cheerleading mediante el juego,
+              el ritmo y el movimiento. Desarrollo motor, coordinación y amor
+              por el deporte desde cero.
+            </p>
+            <div class="grupo-tags">
+              <span class="tag">Formativo</span><span class="tag">Bases</span
+              ><span class="tag">Juego</span>
+            </div>
+          </div>
+          <div class="grupo-card reveal">
+            <div class="grupo-icon">🔥</div>
+            <div class="grupo-age">8–11</div>
+            <div class="grupo-name">Junior Ratels</div>
+            <p class="grupo-desc">
+              Primeras stunts, acrobacias básicas y técnica de pompones.
+              Formación en disciplina, trabajo en equipo y conciencia de
+              escenario.
+            </p>
+            <div class="grupo-tags">
+              <span class="tag">Formativo</span><span class="tag">Stunts</span
+              ><span class="tag">Acrobacia</span>
+            </div>
+          </div>
+          <div class="grupo-card reveal">
+            <div class="grupo-icon">⚡</div>
+            <div class="grupo-age">12–15</div>
+            <div class="grupo-name">Youth Ratels</div>
+            <p class="grupo-desc">
+              Nivel intermedio: stunts avanzados, pirámides, tumbling y
+              coreografía competitiva. Preparación para torneos regionales.
+            </p>
+            <div class="grupo-tags">
+              <span class="tag">Competitivo</span
+              ><span class="tag">Pirámides</span
+              ><span class="tag">Tumbling</span>
+            </div>
+          </div>
+          <div class="grupo-card reveal">
+            <div class="grupo-icon">🦅</div>
+            <div class="grupo-age">16–20</div>
+            <div class="grupo-name">Senior Ratels</div>
+            <p class="grupo-desc">
+              Alto rendimiento. Rutinas avanzadas, stunts de élite y competencia
+              nacional. El corazón de fuego del equipo.
+            </p>
+            <div class="grupo-tags">
+              <span class="tag">Élite</span><span class="tag">Nacional</span
+              ><span class="tag">Alto Rendimiento</span>
+            </div>
+          </div>
+          <div class="grupo-card reveal">
+            <div class="grupo-icon">👑</div>
+            <div class="grupo-age">21+</div>
+            <div class="grupo-name">Open / All Stars</div>
+            <p class="grupo-desc">
+              División abierta para atletas adultos. Sin límite de edad.
+              Competencia y pasión sin fronteras.
+            </p>
+            <div class="grupo-tags">
+              <span class="tag">Abierto</span><span class="tag">Adultos</span
+              ><span class="tag">Pasión</span>
+            </div>
+          </div>
+          <div
+            class="grupo-card reveal"
+            style="
+              border-color: rgba(128, 0, 32, 0.3);
+              background: rgba(128, 0, 32, 0.05);
+            "
+          >
+            <div class="grupo-icon">🎭</div>
+            <div class="grupo-age">Mixto</div>
+            <div class="grupo-name">Performance Team</div>
+            <p class="grupo-desc">
+              Presentaciones, eventos y shows. Formación artística, expresión
+              escénica y danza competitiva.
+            </p>
+            <div class="grupo-tags">
+              <span class="tag">Shows</span><span class="tag">Danza</span
+              ><span class="tag">Escénico</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+
+    <!-- HORARIOS -->
+    <section id="horarios">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-tag">Calendario semanal</div>
+          <h2 class="section-title">Hora de<br /><em>entrenar.</em></h2>
+        </div>
+        <div class="schedule-grid">
+          <div class="schedule-block reveal-left">
+            <h3>Lunes · Miércoles · Viernes</h3>
+            <div class="schedule-row">
+              <div>
+                <div class="sched-day">Mini Ratels</div>
+                <div class="sched-group">4 a 7 años</div>
+              </div>
+              <div class="sched-time">3:00–4:00 PM</div>
+            </div>
+            <div class="schedule-row">
+              <div>
+                <div class="sched-day">Junior Ratels</div>
+                <div class="sched-group">8 a 11 años</div>
+              </div>
+              <div class="sched-time">4:00–5:30 PM</div>
+            </div>
+            <div class="schedule-row">
+              <div>
+                <div class="sched-day">Youth Ratels</div>
+                <div class="sched-group">12 a 15 años</div>
+              </div>
+              <div class="sched-time">5:30–7:30 PM</div>
+            </div>
+          </div>
+          <div class="schedule-block reveal-right">
+            <h3>Martes · Jueves</h3>
+            <div class="schedule-row">
+              <div>
+                <div class="sched-day">Senior Ratels</div>
+                <div class="sched-group">16 a 20 años</div>
+              </div>
+              <div class="sched-time">5:00–7:30 PM</div>
+            </div>
+            <div class="schedule-row">
+              <div>
+                <div class="sched-day">Open / All Stars</div>
+                <div class="sched-group">21+ años</div>
+              </div>
+              <div class="sched-time">7:30–9:00 PM</div>
+            </div>
+            <div class="schedule-row">
+              <div>
+                <div class="sched-day">Performance Team</div>
+                <div class="sched-group">Nivel mixto</div>
+              </div>
+              <div class="sched-time">6:00–8:00 PM</div>
+            </div>
+          </div>
+          <div class="schedule-block reveal-left">
+            <h3>Sábados · Sesión especial</h3>
+            <div class="schedule-row">
+              <div>
+                <div class="sched-day">Tumbling &amp; Acrobacia</div>
+                <div class="sched-group">Todos los grupos</div>
+              </div>
+              <div class="sched-time">8:00–10:00 AM</div>
+            </div>
+            <div class="schedule-row">
+              <div>
+                <div class="sched-day">Prep Competitiva</div>
+                <div class="sched-group">Youth + Senior + Open</div>
+              </div>
+              <div class="sched-time">10:00 AM–1:00 PM</div>
+            </div>
+          </div>
+          <div class="note-box reveal-right">
+            <p>
+              <strong>📍 Ubicación:</strong> Por confirmar con coordinación del
+              club.<br /><br /><strong>⚠️ Nota:</strong> Los horarios pueden
+              ajustarse en temporada de competencia. Notificación anticipada
+              garantizada.<br /><br /><strong>📋 Requisitos:</strong> Ropa
+              deportiva cómoda, tenis suela plana, cabello recogido y ganas de
+              rugir.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+
+    <!-- PRECIOS -->
+    <section id="precios">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-tag">Inversión</div>
+          <h2 class="section-title">Claro y<br /><em>transparente.</em></h2>
+          <p
+            style="
+              color: var(--silver);
+              font-size: 1.05rem;
+              max-width: 580px;
+              margin-top: 1rem;
+            "
+          >
+            Sin sorpresas. Sabes exactamente qué incluye desde el primer día.
+          </p>
+        </div>
+        <div class="pricing-grid">
+          <div class="price-card reveal">
+            <div class="price-label">Inicio</div>
+            <div class="price-name">Inscripción</div>
+            <div class="price-amount">$50.000<span>COP · Pago único</span></div>
+            <ul class="price-includes">
+              <li>Registro oficial en el club</li>
+              <li>Evaluación de nivel inicial</li>
+              <li>Asignación de grupo ideal</li>
+              <li>Primera semana de prueba incluida</li>
+            </ul>
+            <a
+              href="#inscripciones"
+              class="btn-outline"
+              style="display: block; text-align: center; margin-top: 1.5rem"
+              >Iniciar proceso</a
+            >
+          </div>
+          <div class="price-card featured reveal">
+            <div class="price-label">Mensual</div>
+            <div class="price-name">Membresía Activa</div>
+            <div class="price-amount">$80.000<span>COP · Por mes</span></div>
+            <ul class="price-includes">
+              <li>Clases según horario del grupo</li>
+              <li>Camiseta oficial del club</li>
+              <li>Seguro médico deportivo</li>
+              <li>Sesiones de tumbling (sábados)</li>
+              <li>Participación en eventos internos</li>
+            </ul>
+            <a
+              href="#inscripciones"
+              class="btn-primary"
+              style="display: block; text-align: center; margin-top: 1.5rem"
+              >Quiero inscribirme</a
+            >
+          </div>
+          <div class="price-card reveal">
+            <div class="price-label">Competencia</div>
+            <div class="price-name">Temporada</div>
+            <div class="price-amount">
+              A consultar<span>COP · Por evento</span>
+            </div>
+            <ul class="price-includes">
+              <li>Inscripción a torneos</li>
+              <li>Uniforme de competencia</li>
+              <li>Maquillaje y accesorios</li>
+              <li>Transporte (según evento)</li>
+            </ul>
+            <a
+              href="#inscripciones"
+              class="btn-outline"
+              style="display: block; text-align: center; margin-top: 1.5rem"
+              >Consultar más</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+
+    <!-- ENTRENADORES -->
+    <section id="entrenadores">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-tag">El equipo</div>
+          <h2 class="section-title">Quiénes te<br /><em>forjan.</em></h2>
+          <p
+            style="
+              color: var(--silver);
+              font-size: 1.05rem;
+              max-width: 580px;
+              margin-top: 1rem;
+            "
+          >
+            No decimos que son certificados — te decimos quiénes son, qué han
+            logrado y por qué están aquí.
+          </p>
+        </div>
+        <div class="coaches-grid">
+          <!-- HEAD COACH -->
+          <div class="coach-card reveal">
+            <div class="coach-photo">
+              <img src="/img/coach-head.jpg" alt="Head Coach Ratels" />
+            </div>
+            <div class="coach-info">
+              <div class="coach-name">Laura Gómez</div>
+              <div class="coach-role">Head Coach · Fundadora</div>
+
+              <p class="coach-bio">
+                Fundadora de Ratels All Stars. +8 años en cheerleading
+                competitivo. Ha preparado atletas para torneos regionales y
+                nacionales, formando desde nivel inicial hasta alto rendimiento.
+              </p>
+
+              <div class="coach-certs">
+                <span class="cert">USASF Certificada</span>
+                <span class="cert">Stunts Nivel 4</span>
+                <span class="cert">+50 atletas formados</span>
+              </div>
+
+              <div class="coach-extra">
+                🏆 Participación en torneos nacionales<br />
+                🔥 Especialista en formación competitiva
+              </div>
+            </div>
+          </div>
+
+          <!-- ACROBACIA -->
+          <div class="coach-card reveal">
+            <div class="coach-photo">
+              <img src="/img/coach-acro.jpg" alt="Coach Acrobacia Ratels" />
+            </div>
+            <div class="coach-info">
+              <div class="coach-name">Daniel Rojas</div>
+              <div class="coach-role">Coach de Acrobacia · Tumbling</div>
+
+              <p class="coach-bio">
+                Especialista en progresión técnica de tumbling. Formación en
+                gimnasia artística aplicada al cheerleading competitivo.
+              </p>
+
+              <div class="coach-certs">
+                <span class="cert">Gimnasia Artística</span>
+                <span class="cert">Tumbling Avanzado</span>
+                <span class="cert">Prevención de lesiones</span>
+              </div>
+
+              <div class="coach-extra">
+                ⚡ Progresión segura paso a paso<br />
+                🛡️ Enfoque en técnica y control corporal
+              </div>
+            </div>
+          </div>
+
+          <!-- COREOGRAFÍA -->
+          <div class="coach-card reveal">
+            <div class="coach-photo">
+              <img src="/img/coach-danza.jpg" alt="Coach Coreografía Ratels" />
+            </div>
+            <div class="coach-info">
+              <div class="coach-name">Camila Torres</div>
+              <div class="coach-role">Coach de Coreografía · Escena</div>
+
+              <p class="coach-bio">
+                Responsable de la identidad escénica del equipo. Experiencia en
+                danza contemporánea y dirección de shows deportivos.
+              </p>
+
+              <div class="coach-certs">
+                <span class="cert">Danza Contemporánea</span>
+                <span class="cert">Dirección Escénica</span>
+              </div>
+
+              <div class="coach-extra">
+                🎭 Creación de rutinas competitivas<br />
+                🔥 Presencia escénica y expresión
+              </div>
+            </div>
+          </div>
+
+          <!-- INFANTIL -->
+          <div class="coach-card reveal">
+            <div class="coach-photo">
+              <img src="/img/coach-mini.jpg" alt="Coach Infantil Ratels" />
+            </div>
+            <div class="coach-info">
+              <div class="coach-name">Natalia Pérez</div>
+              <div class="coach-role">Coach Mini & Junior</div>
+
+              <p class="coach-bio">
+                Especialista en desarrollo motor infantil y pedagogía deportiva.
+                Crea entornos seguros, motivadores y formativos para los más
+                pequeños.
+              </p>
+
+              <div class="coach-certs">
+                <span class="cert">Pedagogía Infantil</span>
+                <span class="cert">Desarrollo Motor</span>
+              </div>
+
+              <div class="coach-extra">
+                👶 Formación desde cero<br />
+                💛 Enfoque emocional y confianza
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA DE CONVERSIÓN -->
+        <div class="coaches-cta">
+          <p>Entrena con un equipo que sabe lo que hace.</p>
+          <a href="#inscripcion" class="btn-primary"
+            >Quiero entrenar con ellos</a
+          >
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+
+    <!-- ENSEÑANZA -->
+    <section id="ensenanza">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-tag">Metodología</div>
+          <h2 class="section-title">
+            Forjamos<br /><em>guerreros</em><br />del escenario.
+          </h2>
+        </div>
+        <div class="teach-grid">
+          <div class="teach-pillar">
+            <div class="pillar">
+              <div class="pillar-num">01</div>
+              <div class="pillar-content">
+                <h3>Fundamentos Técnicos</h3>
+                <p>
+                  Postura, saltos, brazos, técnica de stunt y posiciones de base
+                  y voladora. La base lo es todo.
+                </p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-num">02</div>
+              <div class="pillar-content">
+                <h3>Acrobacia &amp; Tumbling</h3>
+                <p>
+                  Ruedas, roles, handstands, back walkover y progresión hasta
+                  habilidades competitivas. Cada atleta avanza a su ritmo.
+                </p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-num">03</div>
+              <div class="pillar-content">
+                <h3>Stunts &amp; Pirámides</h3>
+                <p>
+                  Técnica progresiva de elevaciones con énfasis en seguridad.
+                  Bases, spotters y voladoras aprenden juntos.
+                </p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-num">04</div>
+              <div class="pillar-content">
+                <h3>Coreografía &amp; Escenario</h3>
+                <p>
+                  Puesta en escena, sincronía, transiciones y presencia. No solo
+                  se ejecuta — se domina el espacio.
+                </p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-num">05</div>
+              <div class="pillar-content">
+                <h3>Mentalidad Competitiva</h3>
+                <p>
+                  Manejo de presión, concentración y resiliencia. Trabajamos la
+                  cabeza igual que el cuerpo.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="reveal-right">
+            <div class="teach-motto">
+              No entrenas<br />atletas.<br />Forjas<br /><em>guerreros.</em>
+            </div>
+            <p
+              style="
+                font-size: 0.95rem;
+                color: var(--silver);
+                line-height: 1.8;
+                margin-bottom: 1.3rem;
+              "
+            >
+              Nuestro método combina la progresión técnica con la formación del
+              carácter. Porque el cheerleading no es solo deporte: es
+              disciplina, arte y mentalidad.
+            </p>
+            <div class="stat-row">
+              <div class="stat reveal">
+                <div class="stat-num">5</div>
+                <div class="stat-label">Grupos</div>
+              </div>
+              <div class="stat reveal">
+                <div class="stat-num">3+</div>
+                <div class="stat-label">Niveles</div>
+              </div>
+              <div class="stat reveal">
+                <div class="stat-num">360°</div>
+                <div class="stat-label">Formación</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+
+    <!-- MEDIA -->
+    <section id="media">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-tag">Contenido real</div>
+          <h2 class="section-title">¿Cómo se ve<br /><em>estar aquí?</em></h2>
+          <p
+            style="
+              color: var(--silver);
+              font-size: 1.05rem;
+              max-width: 580px;
+              margin-top: 1rem;
+            "
+          >
+            Entrenos, competencias, momentos reales. Esta es la vida Ratel.
+          </p>
+        </div>
+        <div class="media-grid">
+          <div class="media-item big reveal">
+            <div class="media-placeholder">
+              <div class="media-play">▶</div>
+              <div class="media-label">
+                Rutina Competitiva 2024<br />Senior Ratels · Torneo Regional
+              </div>
+            </div>
+          </div>
+          <div class="media-item reveal">
+            <div class="media-placeholder">
+              <div class="media-play media-play-sm">▶</div>
+              <div class="media-label">Stunts Avanzados</div>
+            </div>
+          </div>
+          <div class="media-item reveal">
+            <div class="media-placeholder">
+              <div class="media-play media-play-sm">▶</div>
+              <div class="media-label">Tumbling Mini Ratels</div>
+            </div>
+          </div>
+          <div class="media-item reveal">
+            <div class="media-placeholder">
+              <div class="media-play media-play-sm">▶</div>
+              <div class="media-label">
+                Show Performance<br />Evento Especial
+              </div>
+            </div>
+          </div>
+          <div class="media-item reveal">
+            <div class="media-placeholder">
+              <div class="media-play media-play-sm">📸</div>
+              <div class="media-label">Galería<br />Competencia 2024</div>
+            </div>
+          </div>
+        </div>
+        <div class="media-cta reveal">
+          Síguenos en Instagram para ver contenido real del club:
+          <a href="javascript:void(0)">@ratelsallstars</a>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-tag">Comunidad</div>
+          <h2 class="section-title">Lo que dice<br /><em>la tribu.</em></h2>
+        </div>
+        <div class="results-bar">
+          <div class="result-item reveal">
+            <div class="result-num">3+</div>
+            <div class="result-label">Torneos participados</div>
+          </div>
+          <div class="result-item reveal">
+            <div class="result-num">50+</div>
+            <div class="result-label">Atletas activos</div>
+          </div>
+          <div class="result-item reveal">
+            <div class="result-num">5</div>
+            <div class="result-label">Grupos formados</div>
+          </div>
+          <div class="result-item reveal">
+            <div class="result-num">1</div>
+            <div class="result-label">Tribu indestructible</div>
+          </div>
+        </div>
+        <div class="test-grid">
+          <div class="test-card reveal">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-text">
+              Mi hija llegó sin saber absolutamente nada. En 3 meses ya hacía
+              stunts. La disciplina y el amor de los coaches cambió su vida —
+              ahora ella misma pide ir a entrenar.
+            </p>
+            <div class="test-author">
+              <div class="test-avatar">MA</div>
+              <div>
+                <div class="test-name">Mamá de Valeria</div>
+                <div class="test-role">Grupo Junior · 9 años</div>
+              </div>
+            </div>
+          </div>
+          <div class="test-card reveal">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-text">
+              Nunca pensé que a mis 24 años iba a poder hacer cheerleading. Aquí
+              no importa la edad — importa la actitud. El grupo Open me cambió
+              por completo.
+            </p>
+            <div class="test-author">
+              <div class="test-avatar">SA</div>
+              <div>
+                <div class="test-name">Santiago A.</div>
+                <div class="test-role">Grupo Open · 24 años</div>
+              </div>
+            </div>
+          </div>
+          <div class="test-card reveal">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-text">
+              Lo que más me impresiona es la cultura del equipo. Mi hijo no solo
+              aprendió cheerleading — aprendió a no rendirse y a ser parte de
+              algo más grande.
+            </p>
+            <div class="test-author">
+              <div class="test-avatar">CP</div>
+              <div>
+                <div class="test-name">Papá de Tomás</div>
+                <div class="test-role">Grupo Youth · 14 años</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+
+    <!-- RITUALES -->
+    <section id="rituales">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-tag">Identidad tribal</div>
+          <h2 class="section-title" style="text-align: center">
+            Nuestra<br /><em>Cultura</em>
+          </h2>
+        </div>
+        <div class="ritual-intro reveal">
+          <p>
+            Ratels no es solo un equipo. Es una tribu. Tenemos rituales,
+            símbolos y tradiciones que nos unen antes, durante y después de cada
+            competencia.
+          </p>
+        </div>
+        <div class="rituales-grid">
+          <div class="ritual-card reveal">
+            <div class="ritual-icon">🦡</div>
+            <h3>El Rugido</h3>
+            <p>
+              Antes de competir, todos hacen un rugido conjunto. El grito de
+              guerra que anuncia que los Ratels llegaron.
+            </p>
+          </div>
+          <div class="ritual-card reveal">
+            <div class="ritual-icon">🔴</div>
+            <h3>La Marca de Hierro</h3>
+            <p>
+              Cinta vinotinto en el brazo derecho antes de cada presentación. La
+              marca del guerrero.
+            </p>
+          </div>
+          <div class="ritual-card reveal">
+            <div class="ritual-icon">🤜</div>
+            <h3>El Fuego Interno</h3>
+            <p>
+              Al cierre de cada entrenamiento, el ritual que recuerda de qué
+              estamos hechos.
+            </p>
+          </div>
+          <div class="ritual-card reveal">
+            <div class="ritual-icon">✊</div>
+            <h3>El Saludo Ratel</h3>
+            <p>
+              Mano cerrada con dos dedos al pecho. Fuerza + fuego. El gesto de
+              victoria post-competencia.
+            </p>
+          </div>
+        </div>
+        <div class="war-cry reveal">
+          <div class="war-cry-text">
+            "¡PIEL DE HIERRO!" — <span class="res">¡CORAZÓN DE FUEGO!</span>
+          </div>
+          <div class="war-cry-label">Grito de cierre · Ratels All Stars</div>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+
+    <!-- TEST DE NIVEL -->
+    <section id="test-nivel">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-tag">Test interactivo</div>
+          <h2 class="section-title">¿En qué grupo<br /><em>estás?</em></h2>
+          <p
+            style="
+              color: var(--silver);
+              font-size: 1.05rem;
+              max-width: 580px;
+              margin-top: 1rem;
+            "
+          >
+            4 preguntas rápidas — te decimos exactamente qué grupo es para ti.
+          </p>
+        </div>
+        <div class="quiz-wrapper reveal">
+          <div class="quiz-card">
+            <div class="quiz-progress">
+              <div class="quiz-dot done" id="dot0"></div>
+              <div class="quiz-dot" id="dot1"></div>
+              <div class="quiz-dot" id="dot2"></div>
+              <div class="quiz-dot" id="dot3"></div>
+            </div>
+            <div class="quiz-step active" id="step0">
+              <div class="quiz-question">¿Cuántos años tienes?</div>
+              <div class="quiz-sub">
+                O la edad del atleta si eres padre/madre.
+              </div>
+              <div class="quiz-options">
+                <button class="quiz-option" onclick="answer(0, '4-7')">
+                  4 a 7 años
+                </button>
+                <button class="quiz-option" onclick="answer(0, '8-11')">
+                  8 a 11 años
+                </button>
+                <button class="quiz-option" onclick="answer(0, '12-15')">
+                  12 a 15 años
+                </button>
+                <button class="quiz-option" onclick="answer(0, '16+')">
+                  16 años o más
+                </button>
+              </div>
+            </div>
+            <div class="quiz-step" id="step1">
+              <div class="quiz-question">¿Tienes experiencia?</div>
+              <div class="quiz-sub">
+                En cheerleading o cualquier deporte acrobático.
+              </div>
+              <div class="quiz-options">
+                <button class="quiz-option" onclick="answer(1, 'none')">
+                  Cero, nunca he hecho nada
+                </button>
+                <button class="quiz-option" onclick="answer(1, 'basic')">
+                  Algo básico, menos de 1 año
+                </button>
+                <button class="quiz-option" onclick="answer(1, 'mid')">
+                  1 a 3 años de práctica
+                </button>
+                <button class="quiz-option" onclick="answer(1, 'adv')">
+                  Más de 3 años o nivel avanzado
+                </button>
+              </div>
+            </div>
+            <div class="quiz-step" id="step2">
+              <div class="quiz-question">¿Qué te mueve?</div>
+              <div class="quiz-sub">
+                ¿Qué te llamó la atención del cheerleading?
+              </div>
+              <div class="quiz-options">
+                <button class="quiz-option" onclick="answer(2, 'fun')">
+                  El juego y la diversión
+                </button>
+                <button class="quiz-option" onclick="answer(2, 'art')">
+                  El arte, la coreografía y el show
+                </button>
+                <button class="quiz-option" onclick="answer(2, 'compete')">
+                  La competencia y ganar
+                </button>
+                <button class="quiz-option" onclick="answer(2, 'team')">
+                  El equipo y la pertenencia
+                </button>
+              </div>
+            </div>
+            <div class="quiz-step" id="step3">
+              <div class="quiz-question">¿Cuántos días entrenas?</div>
+              <div class="quiz-sub">
+                Siendo realista con tu disponibilidad semanal.
+              </div>
+              <div class="quiz-options">
+                <button class="quiz-option" onclick="answer(3, '1-2')">
+                  1 a 2 días
+                </button>
+                <button class="quiz-option" onclick="answer(3, '3')">
+                  3 días
+                </button>
+                <button class="quiz-option" onclick="answer(3, '4+')">
+                  4 días o más
+                </button>
+              </div>
+            </div>
+            <div class="quiz-step quiz-result" id="result">
+              <div style="font-size: 2.5rem">🦡</div>
+              <div
+                style="
+                  font-family: &quot;Orbitron&quot;, monospace;
+                  font-size: 0.6rem;
+                  letter-spacing: 0.3em;
+                  color: var(--silver);
+                  text-transform: uppercase;
+                  margin-top: 1rem;
+                "
+              >
+                Tu grupo ideal es
+              </div>
+              <div class="quiz-result-group" id="resultGroup">—</div>
+              <p class="quiz-result-desc" id="resultDesc"></p>
+              <a
+                href="#inscripciones"
+                class="btn-primary"
+                style="display: inline-block"
+                >¡Quiero inscribirme!</a
+              ><br />
+              <button class="quiz-restart" onclick="restartQuiz()">
+                Hacer el test de nuevo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+
+    <!-- UBICACIÓN -->
+    <section id="ubicacion">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-tag">Encuéntranos</div>
+          <h2 class="section-title">
+            Dónde estamos<br /><em>en Florencia</em>
+          </h2>
+          <p
+            style="
+              color: var(--silver);
+              font-size: 1.05rem;
+              max-width: 640px;
+              margin-top: 1rem;
+            "
+          >
+            Ratels All Stars opera desde el corazón de Florencia, Caquetá.
+            Visítanos para una clase de prueba y consulta personalizada.
+          </p>
+        </div>
+
+        <div class="location-grid">
+          <!-- INFO -->
+          <div class="location-info reveal-left">
+            <!-- STATUS EN TIEMPO REAL -->
+            <div class="location-status" id="locationStatus">
+              <span class="status-dot" id="statusDot"></span>
+              <span class="status-text" id="statusText">Calculando...</span>
+              <span class="status-hours" id="statusHours"></span>
+            </div>
+
+            <!-- DIRECCIÓN CON COPY -->
+            <div class="location-block">
+              <div class="location-block-label">Dirección</div>
+              <div class="location-address-row">
+                <p id="addressText">
+                  Calle 20 #2-28, Barrio el Convenio,<br />
+                  Florencia, Caquetá, Colombia.
+                </p>
+                <button
+                  class="copy-btn"
+                  id="copyBtn"
+                  onclick="copyAddress()"
+                  title="Copiar dirección"
+                >
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect x="9" y="9" width="13" height="13" rx="2" />
+                    <path
+                      d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                    />
+                  </svg>
+                  <span id="copyLabel">Copiar</span>
+                </button>
+              </div>
+              <p class="location-reference">
+                📍 A pocas cuadras del centro · Cerca de [referencia conocida]
+              </p>
+            </div>
+
+            <!-- HORARIOS -->
+            <div class="location-block">
+              <div class="location-block-label">Horarios de atención</div>
+              <div class="hours-grid">
+                <div class="hours-row" data-days="1,2,3,4,5">
+                  <span class="hours-day">Lun — Vie</span>
+                  <span class="hours-time">2:00 PM – 9:00 PM</span>
+                </div>
+                <div class="hours-row" data-days="6">
+                  <span class="hours-day">Sábado</span>
+                  <span class="hours-time">8:00 AM – 2:00 PM</span>
+                </div>
+                <div class="hours-row" data-days="0">
+                  <span class="hours-day">Domingo</span>
+                  <span
+                    class="hours-time"
+                    style="color: var(--silver); opacity: 0.5"
+                    >Cerrado</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- CONTACTO -->
+            <div class="location-block">
+              <div class="location-block-label">Contacto rápido</div>
+              <p style="color: #ccc; font-size: 0.95rem">
+                WhatsApp +57 300 000 0000
+              </p>
+            </div>
+
+            <div
+              style="
+                display: flex;
+                gap: 0.8rem;
+                flex-wrap: wrap;
+                margin-top: 1.5rem;
+              "
+            >
+              <a
+                href="https://maps.app.goo.gl/9NyEMDXv5do7U9CJ7"
+                target="_blank"
+                rel="noopener"
+                class="btn-primary"
+              >
+                Cómo llegar
+              </a>
+              <button class="btn-outline" onclick="openWhatsApp()">
+                Agendar visita
+              </button>
+            </div>
+          </div>
+
+          <!-- FOTO -->
+          <img
+            src="/img/gimnasio-ratels.jpg"
+            alt="Instalaciones Ratels"
+            class="location-photo"
+          />
+
+          <!-- MAPA LAZY -->
+          <div class="location-map-wrapper reveal-right">
+            <div class="map-preview" id="mapPreview" onclick="loadMap()">
+              <div class="map-preview-bg"></div>
+              <div class="map-preview-content">
+                <div class="map-pin-icon">📍</div>
+                <div class="map-preview-label">Ratels All Stars</div>
+                <div class="map-preview-sublabel">Florencia, Caquetá</div>
+                <button class="map-load-btn">Ver en mapa</button>
+              </div>
+            </div>
+            <div
+              class="map-iframe-wrapper"
+              id="mapIframe"
+              style="display: none"
+            >
+              <iframe
+                id="mapFrame"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+
+    <!-- INSCRIPCIONES -->
+    <section id="inscripciones">
+      <div class="section-inner">
+        <div class="inscr-grid">
+          <div>
+            <div class="section-tag reveal">Únete a la tribu</div>
+            <h2 class="section-title reveal">
+              ¿Listo para<br /><em>rugir?</em>
+            </h2>
+            <div class="urgency-tag reveal">
+              🔴 Cupos limitados · Cierre 15 de agosto
+            </div>
+            <p
+              class="reveal"
+              style="
+                font-size: 1.05rem;
+                color: var(--silver);
+                line-height: 1.8;
+                margin-bottom: 1.3rem;
+              "
+            >
+              No buscamos perfección desde el primer día. Buscamos actitud,
+              compromiso y ganas de crecer. El resto lo forjamos nosotros.
+            </p>
+            <ul class="inscr-list reveal">
+              <li>Sin experiencia para grupos Mini y Junior</li>
+              <li>Prueba de habilidades para Youth, Senior y Open</li>
+              <li>Ambiente inclusivo, seguro y de alto rendimiento</li>
+              <li>
+                Inscripción única:
+                <strong style="color: var(--white)">$50.000 COP</strong>
+              </li>
+              <li>
+                Mensualidad:
+                <strong style="color: var(--white)">$80.000 COP</strong>
+                (incluye camiseta + seguro médico)
+              </li>
+              <li>Participación en competencias regionales y nacionales</li>
+            </ul>
+            <div class="hashtags reveal">
+              <span class="hashtag">#ModoRatel</span>
+              <span class="hashtag">#FuriaRatels</span>
+              <span class="hashtag">#PielDeHierro</span>
+              <span class="hashtag">#CorazonDeFuego</span>
+              <span class="hashtag">#WeAreRatels</span>
+            </div>
+          </div>
+          <div class="form-card reveal-right">
+            <h3>Solicitar Info</h3>
+            <p>Déjanos tus datos y te contactamos en menos de 24 horas.</p>
+            <div id="formBody">
+              <div class="form-group">
+                <label>Nombre completo</label>
+                <input
+                  type="text"
+                  id="fName"
+                  placeholder="Tu nombre o el del atleta"
+                />
+              </div>
+              <div class="form-group">
+                <label>Edad del atleta</label>
+                <input
+                  type="number"
+                  id="fAge"
+                  placeholder="Ej: 9"
+                  min="4"
+                  max="60"
+                />
+              </div>
+              <div class="form-group">
+                <label>Grupo de interés</label>
+                <select id="fGroup">
+                  <option value="" disabled selected>
+                    Selecciona un grupo
+                  </option>
+                  <option>Mini Ratels (4–7 años)</option>
+                  <option>Junior Ratels (8–11 años)</option>
+                  <option>Youth Ratels (12–15 años)</option>
+                  <option>Senior Ratels (16–20 años)</option>
+                  <option>Open / All Stars (21+)</option>
+                  <option>Performance Team</option>
+                  <option>No sé aún — necesito orientación</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Teléfono / WhatsApp</label>
+                <input type="tel" id="fPhone" placeholder="+57 300 000 0000" />
+              </div>
+              <div class="form-actions">
+                <button
+                  class="btn-primary"
+                  onclick="submitForm()"
+                  style="width: 100%; text-align: center"
+                >
+                  Quiero mi cupo
+                </button>
+                <button
+                  class="btn-wa"
+                  onclick="openWhatsApp()"
+                  style="width: 100%; justify-content: center"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                    />
+                  </svg>
+                  Escribir por WhatsApp
+                </button>
+              </div>
+              <p class="wa-note">
+                📲 El botón de WhatsApp lleva el mensaje prellenado con tus
+                datos.
+              </p>
+            </div>
+            <div class="form-success" id="formSuccess">
+              <div class="big-emoji">🦡</div>
+              <h3>¡Rugido recibido!</h3>
+              <p>
+                Te contactamos en menos de 24 horas.<br />La tribu Ratels te
+                espera.<br /><br /><strong style="color: var(--wine)"
+                  >"Piel de hierro, corazón de fuego."</strong
+                >
+              </p>
+              <br />
+              <button
+                class="btn-wa"
+                onclick="openWhatsApp()"
+                style="margin: 0 auto"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                  />
+                </svg>
+                Confirmar por WhatsApp también
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-tag">Dudas comunes</div>
+          <h2 class="section-title">Preguntas<br /><em>frecuentes</em></h2>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item reveal">
+            <h3>¿Necesito experiencia previa?</h3>
+            <p>
+              No. Los grupos Mini y Junior están diseñados desde cero. Para
+              Youth, Senior y Open realizamos una evaluación básica.
+            </p>
+          </div>
+
+          <div class="faq-item reveal">
+            <h3>¿Qué incluye la mensualidad?</h3>
+            <p>
+              Incluye clases según el grupo, camiseta oficial, seguro médico
+              deportivo, sesiones de tumbling y participación en eventos
+              internos.
+            </p>
+          </div>
+
+          <div class="faq-item reveal">
+            <h3>¿Qué pasa si falto a una clase?</h3>
+            <p>
+              Puedes retomar en la siguiente sesión. Recomendamos asistencia
+              constante para asegurar progresión técnica.
+            </p>
+          </div>
+
+          <div class="faq-item reveal">
+            <h3>¿Es seguro el cheerleading?</h3>
+            <p>
+              Sí. Trabajamos con progresión técnica, coaches capacitados y
+              protocolos de seguridad estrictos en cada entrenamiento.
+            </p>
+          </div>
+
+          <div class="faq-item reveal">
+            <h3>¿Hay clase de prueba?</h3>
+            <p>
+              Sí. La primera semana está incluida en la inscripción para evaluar
+              adaptación y nivel.
+            </p>
+          </div>
+
+          <div class="faq-item reveal">
+            <h3>¿Qué necesito para comenzar?</h3>
+            <p>
+              Ropa deportiva cómoda, tenis de suela plana, cabello recogido y
+              actitud para aprender.
+            </p>
+          </div>
+
+          <div class="faq-item reveal">
+            <h3>¿Participan en competencias?</h3>
+            <p>
+              Sí. Los grupos Youth, Senior y Open participan en torneos
+              regionales y nacionales durante la temporada competitiva.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-cta">
+          <p>¿Tienes otra duda?</p>
+          <a href="javascript:openWhatsApp()" class="btn-primary">
+            Hablar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <div class="footer-logo">RATELS <span>ALL STARS</span></div>
+        <div class="footer-slogan">Piel de hierro · Corazón de fuego</div>
+      </div>
+      <div class="footer-copy">
+        © 2025 Ratels All Stars · Florencia, Caquetá · Todos los derechos
+        reservados
+      </div>
+    </footer>
+
+    <script>
+      // CURSOR
+      const cur = document.getElementById("cursor"),
+        ring = document.getElementById("cursorRing");
+      document.addEventListener("mousemove", (e) => {
+        cur.style.left = e.clientX + "px";
+        cur.style.top = e.clientY + "px";
+        setTimeout(() => {
+          ring.style.left = e.clientX + "px";
+          ring.style.top = e.clientY + "px";
+        }, 60);
+      });
+
+      // NAV + PROGRESS
+      const nav = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        nav.classList.toggle("scrolled", window.scrollY > 60);
+        document.getElementById("progress-bar").style.width =
+          (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
+            100 +
+          "%";
+        let cur = "";
+        document.querySelectorAll("section[id]").forEach((s) => {
+          if (window.scrollY >= s.offsetTop - 200) cur = s.id;
+        });
+        document
+          .querySelectorAll(".nav-links a")
+          .forEach((a) =>
+            a.classList.toggle("active", a.getAttribute("href") === "#" + cur),
+          );
+      });
+
+      // VIDEO HERO — fade in cuando esté listo
+      const heroVideo = document.getElementById("heroVideo");
+      if (heroVideo) {
+        heroVideo.addEventListener("canplaythrough", () => {
+          heroVideo.classList.add("loaded");
+        });
+        // Fallback: si tarda más de 2s, muéstralo igual
+        setTimeout(() => heroVideo.classList.add("loaded"), 2000);
+      }
+
+      // REVEAL
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              setTimeout(
+                () => e.target.classList.add("visible"),
+                +e.target.dataset.delay || 0,
+              );
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+      );
+      document
+        .querySelectorAll(".reveal,.reveal-left,.reveal-right,.pillar")
+        .forEach((el, i) => {
+          el.dataset.delay = (i % 6) * 60;
+          io.observe(el);
+        });
+
+      // QUIZ
+      const qAnswers = {};
+      function answer(step, val) {
+        qAnswers[step] = val;
+        document.getElementById("step" + step).classList.remove("active");
+        document.getElementById("dot" + step).classList.add("done");
+        const n = step + 1;
+        if (n < 4) {
+          const nd = document.getElementById("dot" + n);
+          if (nd) nd.classList.add("done");
+          const ns = document.getElementById("step" + n);
+          if (ns) {
+            ns.classList.add("active");
+            return;
+          }
+        }
+        showResult();
+      }
+      function showResult() {
+        document.getElementById("result").classList.add("active");
+        const age = qAnswers[0],
+          exp = qAnswers[1];
+        let group = "",
+          desc = "";
+        if (age === "4-7") {
+          group = "MINI RATELS";
+          desc =
+            "Perfecto para dar los primeros pasos. Aprenderás mediante el juego, el ritmo y el movimiento. Sin experiencia previa — solo ganas de divertirse y crecer.";
+        } else if (age === "8-11") {
+          group = "JUNIOR RATELS";
+          desc =
+            "Edad ideal para comenzar stunts básicos y acrobacia. Formarás equipo con otros Juniors y aprenderás disciplina, técnica y cómo brillar en escena.";
+        } else if (age === "12-15") {
+          group = exp === "adv" ? "YOUTH COMPETITIVO" : "YOUTH RATELS";
+          desc =
+            exp === "adv"
+              ? "Tienes base para el nivel competitivo. Te esperan pirámides, tumbling avanzado y preparación para torneos regionales."
+              : "El grupo ideal para crecer. Aprenderás stunts, pirámides y coreografía — con o sin experiencia previa.";
+        } else {
+          group =
+            exp === "adv" ? "SENIOR / OPEN ÉLITE" : "SENIOR O OPEN RATELS";
+          desc =
+            exp === "adv"
+              ? "Nivel élite. Rutinas avanzadas, competencia nacional y la mentalidad Ratel al máximo."
+              : "Bienvenido sin importar el punto de partida. Los grupos Senior y Open tienen espacio para quienes llegan con ganas desde cero.";
+        }
+        document.getElementById("resultGroup").textContent = group;
+        document.getElementById("resultDesc").textContent = desc;
+      }
+      function restartQuiz() {
+        Object.keys(qAnswers).forEach((k) => delete qAnswers[k]);
+        document
+          .querySelectorAll(".quiz-step")
+          .forEach((s) => s.classList.remove("active"));
+        document
+          .querySelectorAll(".quiz-dot")
+          .forEach((d, i) => d.classList.toggle("done", i === 0));
+        document.getElementById("step0").classList.add("active");
+      }
+
+      // FORM SUBMIT
+      function submitForm() {
+        const n = document.getElementById("fName").value.trim();
+        const a = document.getElementById("fAge").value;
+        const g = document.getElementById("fGroup").value;
+        const p = document.getElementById("fPhone").value.trim();
+        if (!n || !a || !g || !p) {
+          alert("Por favor completa todos los campos para continuar.");
+          return;
+        }
+        document.getElementById("formBody").style.display = "none";
+        document.getElementById("formSuccess").style.display = "block";
+      }
+
+      // WHATSAPP — reemplaza el número con el real del club
+      function openWhatsApp() {
+        const n = document.getElementById("fName")
+          ? document.getElementById("fName").value
+          : "";
+        const a = document.getElementById("fAge")
+          ? document.getElementById("fAge").value
+          : "";
+        const g = document.getElementById("fGroup")
+          ? document.getElementById("fGroup").value
+          : "";
+        let msg = "Hola Ratels All Stars! 🦡 Me interesa inscribirme al club.";
+        if (n) msg += "\n\nNombre: " + n;
+        if (a) msg += "\nEdad: " + a + " años";
+        if (g) msg += "\nGrupo de interés: " + g;
+        msg += "\n\n¿Me pueden dar más información? ¡Gracias!";
+        const numero = "573000000000"; // ← CAMBIAR POR EL NÚMERO REAL
+        window.open(
+          "https://wa.me/" + numero + "?text=" + encodeURIComponent(msg),
+          "_blank",
+        );
+      }
+
+      // MENÚ HAMBURGUESA
+      const hamburger = document.getElementById("navHamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      function closeMobileMenu() {
+        hamburger.classList.remove("open");
+        mobileMenu.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      hamburger.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.contains("open");
+        if (isOpen) {
+          closeMobileMenu();
+        } else {
+          hamburger.classList.add("open");
+          mobileMenu.classList.add("open");
+          document.body.style.overflow = "hidden"; // evita scroll del fondo
+        }
+      });
+
+      // Cerrar al tocar el fondo oscuro
+      mobileMenu.addEventListener("click", (e) => {
+        if (e.target === mobileMenu) closeMobileMenu();
+      });
+
+      // Cerrar con tecla Escape
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMobileMenu();
+      });
+
+      // UBICACIÓN — status en tiempo real
+      (function () {
+        const schedule = {
+          1: { open: 14, close: 21 }, // Lunes
+          2: { open: 14, close: 21 },
+          3: { open: 14, close: 21 },
+          4: { open: 14, close: 21 },
+          5: { open: 14, close: 21 }, // Viernes
+          6: { open: 8, close: 14 }, // Sábado
+          0: null, // Domingo — cerrado
+        };
+
+        function updateStatus() {
+          const now = new Date();
+          const day = now.getDay();
+          const hour = now.getHours() + now.getMinutes() / 60;
+          const sched = schedule[day];
+          const dot = document.getElementById("statusDot");
+          const text = document.getElementById("statusText");
+          const hours = document.getElementById("statusHours");
+          if (!dot) return;
+
+          if (sched && hour >= sched.open && hour < sched.close) {
+            dot.className = "status-dot open";
+            text.textContent = "Abierto ahora";
+            text.style.color = "#22c55e";
+            const closeH =
+              sched.close >= 12
+                ? (sched.close > 12 ? sched.close - 12 : 12) + ":00 PM"
+                : sched.close + ":00 AM";
+            hours.textContent = "Cierra a las " + closeH;
+          } else {
+            dot.className = "status-dot closed";
+            text.textContent = "Cerrado ahora";
+            text.style.color = "#ef4444";
+            // Mostrar cuándo abre próximamente
+            const nextDay = sched && hour >= sched.close ? (day % 7) + 1 : day;
+            const nextSch = schedule[nextDay];
+            if (nextSch) {
+              const openH =
+                nextSch.open >= 12
+                  ? (nextSch.open > 12 ? nextSch.open - 12 : 12) + ":00 PM"
+                  : nextSch.open + ":00 AM";
+              const dayNames = [
+                "Dom",
+                "Lun",
+                "Mar",
+                "Mié",
+                "Jue",
+                "Vie",
+                "Sáb",
+              ];
+              hours.textContent = "Abre el " + dayNames[nextDay] + " " + openH;
+            } else {
+              hours.textContent = "Abre el lunes 2:00 PM";
+            }
+          }
+        }
+
+        // Resaltar fila del día actual
+        const today = new Date().getDay();
+        document.querySelectorAll(".hours-row").forEach((row) => {
+          const days = (row.dataset.days || "").split(",").map(Number);
+          if (days.includes(today)) row.classList.add("today");
+        });
+
+        updateStatus();
+        setInterval(updateStatus, 60000);
+      })();
+
+      // COPY ADDRESS
+      function copyAddress() {
+        const text =
+          "Calle 20 #2-28, Barrio el Convenio, Florencia, Caquetá, Colombia.";
+        navigator.clipboard.writeText(text).then(() => {
+          const btn = document.getElementById("copyBtn");
+          const label = document.getElementById("copyLabel");
+          btn.classList.add("copied");
+          label.textContent = "¡Copiado!";
+          setTimeout(() => {
+            btn.classList.remove("copied");
+            label.textContent = "Copiar";
+          }, 2200);
+        });
+      }
+
+      // MAPA LAZY
+      function loadMap() {
+        const preview = document.getElementById("mapPreview");
+        const wrapper = document.getElementById("mapIframe");
+        const frame = document.getElementById("mapFrame");
+        frame.src =
+          "https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1078.8475510705152!2d-75.60390798281462!3d1.6164211706278753!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2sco!4v1774677886006!5m2!1ses!2sco";
+        preview.style.display = "none";
+        wrapper.style.display = "block";
+      }
+
+      //Close banner urgencia
+      function closeBanner() {
+        const banner = document.getElementById("urgencyBanner");
+        banner.style.display = "none";
+
+        // Opcional: guardar en localStorage
+        localStorage.setItem("bannerClosed", "true");
+      }
+
+      // Mantenerlo cerrado si ya lo cerró
+      window.onload = function () {
+        if (localStorage.getItem("bannerClosed") === "true") {
+          document.getElementById("urgencyBanner").style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
